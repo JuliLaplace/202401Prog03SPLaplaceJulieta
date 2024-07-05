@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP Labo III</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>PP Laboratorio III - Julieta Laplace</h1>
+
+            <div class="contenedor-datos" id="contDatos">
+                <h2>Form Listado</h2>
+                <div class="contenedor-filtros">
+                    <label for="filtro">Filtrar por</label>
+                    <select name="filtro" id="filtro">
+                        <option value="todos" selected>Todos</option>
+                        <option value="ciudadanos">Ciudadanos</option>
+                        <option value="extranjeros">Extranjeros</option>
+                    </select>
+                </div>
+                
+                <div class="tabla">
+                    <table id="tabla">
+                        <thead>
+                            <tr>
+                                <th><button class="btn-order">ID</button></th>
+                                <th><button class="btn-order">Nombre</button></th>
+                                <th><button class="btn-order">Apellido</button></th>
+                                <th><button class="btn-order">Fecha Nacimiento</button></th>
+                                <th><button class="btn-order">DNI</button></th>
+                                <th><button class="btn-order">Pais Origen</button></th>
+                                <th><button class="btn-order">Modificar</button></th>
+                                <th><button class="btn-order">Eliminar</button></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                    <button id="btnAgregar" class="btn" type="button">Agregar</button>
+                </div>
+                
+            </div>
+            <div id="spinner-contenedor">
+                <div id="spinner">
+                    <img src="./spinner.gif" alt="Imagen Spinner - Cargando">
+                </div>
+            </div>
+                
+
+        <form action="" id="formABM" style="display: none;">
+            <h2 id="titulo-form"></h2>
+            <div class="contenedor-id">
+                <label for="id">Id</label>
+                <input type="text" name="id" id="id" readonly>
+            </div>
+            <div class="contenedor-nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" >
+            </div>
+            <div class="contenedor-apellido">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" >
+            </div>
+            <div class="contenedor-fechaNacimiento">
+                <label for="fechaNacimiento" >Fecha Nacimiento</label>
+                <input type="number" name="fechaNacimiento" id="fechaNacimiento" >
+            </div>
+            <div class="contenedor-tipo">
+                <label for="tipo">Tipo</label>
+                <select name="tipo" id="tipo" >
+                    <option value="extranjero">Extranjero</option>
+                    <option value="ciudadano">Ciudadano</option>
+                    
+                </select>
+            </div>
+            
+            <div id="contenedor-Ciudadano" style="display: none;">
+                <label for="dni">DNI</label>
+                <input type="number" name="dni" id="dni" > <br>
+            </div>
+            <div id="contenedor-Extranjero">
+                <label for="paisOrigen" >Pais Origen</label>
+                <input type="text" name="paisOrigen" id="paisOrigen" > <br>
+            </div>
+            <div class="contenedor-botones">
+                <input type="submit" value="Aceptar" class="btn" id="btnSubmit">
+                <input type="reset" value="Cancelar" class="btn" id="btnReset">
+            </div>
+            
+        </form>
+    </main>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
