@@ -87,7 +87,7 @@ function obtenerDatosXML() {
 async function agregarPersonaFetchAsync(persona) {
     spinnerContainer.style.display = "block";
     try {
-        let response = await fetch("https://examenesutn.vercel.app/api/PersonaCiudadanoExtranjer", {
+        let response = await fetch("https://examenesutn.vercel.app/api/PersonaCiudadanoExtranjero", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
